@@ -1,15 +1,28 @@
 import turtle
+pen=turtle.Turtle()
+def curve():
+    for i in range (200):
+        pen.right(1)
+        pen.forward(1)
+def heart():
+    pen.fillcolor("red")
+    pen.begin_fill()
+    pen.left(140)
+    pen.forward(113)
+    curve()
+    pen.left(120)
+    curve()
+    pen.forward(112)
+    pen.end_fill()
 
-turtle.pensize(5)
-turtle.speed(1)
-turtle.color('purple')
-turtle.begin_fill()
-turtle.fillcolor('green')
-turtle.left(150)
-turtle.forward(180)
-turtle.circle(-90,180)
-turtle.setheading(60)
-turtle.circle(-90,180)
-turtle.forward(180)
-turtle.end_fill()
-turtle.mainloop()
+def txt():
+    pen.up()
+    pen.setpos(-68,95)
+    pen.down()
+    pen.color("blue")
+    pen.write("shiva ",font=("verdana",12,"bold"))
+
+heart()
+txt()
+pen.ht()
+
